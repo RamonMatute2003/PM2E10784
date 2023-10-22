@@ -26,10 +26,11 @@ namespace PM2E10784 {
             var local = CrossGeolocator.Current;
 
             if(connection==NetworkAccess.Internet) {
-                if(local!=null&&local.IsGeolocationAvailable&&local.IsGeolocationEnabled) {
+                if(local==null||!local.IsGeolocationAvailable||!local.IsGeolocationEnabled) {
+                    // Si la geolocalización no está disponible o no está habilitada
                     CheckAndRequestLocationPermissionAsync();
-                }else{
-                    await DisplayAlert("GPS desactivado","Por favor, activa el GPS para continuar.","OK");
+                } else {
+                    GetLocationAsync();
                 }
             } else {
                 await DisplayAlert("Sin Acceso a internet","Por favor, revisa tu conexion a internet para continuar.","OK");
