@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E10784.MainPage">
+
+    <StackLayout Padding="20">
+
+        <Image Source="logo_uth.png" HeightRequest="100" WidthRequest="300" HorizontalOptions="Center" />
+
+        <Label Text="SITE VISITOR APP" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+
+        <Frame HeightRequest="200" WidthRequest="200" BorderColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image x:Name="img_photo"/>
+        </Frame>
+
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <ImageButton Source="photo.png" Clicked="btn_photo_Clicked"></ImageButton>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Latitud" WidthRequest="100" />
+            <Entry Placeholder="" x:Name="txt_latitude" IsEnabled="False" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Longitud" WidthRequest="100" />
+            <Entry Placeholder="" x:Name="txt_longitude" IsEnabled="False" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Descripcion" WidthRequest="100" />
+            <Entry Placeholder="Enter description" x:Name="txt_description" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <Button Text="Agregar" Clicked="btn_save" HorizontalOptions="CenterAndExpand" />
+        <Button Text="Lista Sitios" Clicked="btn_lista" HorizontalOptions="CenterAndExpand" />
+        <Button Text="Salir App" HorizontalOptions="CenterAndExpand" />
+
+    </StackLayout>
+
+</ContentPage>
