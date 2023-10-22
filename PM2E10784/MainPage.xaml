@@ -29,12 +29,12 @@
 
         <StackLayout Orientation="Horizontal">
             <Label Text="Descripcion" WidthRequest="100" />
-            <Entry Placeholder="Enter description" x:Name="txt_description" HorizontalOptions="FillAndExpand" />
+            <Entry Placeholder="Enter description" MaxLength="300" x:Name="txt_description" HorizontalOptions="FillAndExpand" />
         </StackLayout>
 
         <Button Text="Agregar" Clicked="btn_save" HorizontalOptions="CenterAndExpand" />
         <Button Text="Lista Sitios" Clicked="btn_lista" HorizontalOptions="CenterAndExpand" />
-        <Button Text="Salir App" HorizontalOptions="CenterAndExpand" />
+        <Button Text="Salir App" Clicked="exit" HorizontalOptions="CenterAndExpand" />
 
     </StackLayout>
 

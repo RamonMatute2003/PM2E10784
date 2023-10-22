@@ -118,6 +118,10 @@ namespace PM2E10784 {
             await Navigation.PushAsync(new Page_lista());
         }
 
+        private void exit(object sender,EventArgs e) {
+            Environment.Exit(0);
+        }
+
         private async Task<bool> RequestCameraPermissionsAsync() {
             var cameraStatus = await Permissions.CheckStatusAsync<Permissions.Camera>();
 
